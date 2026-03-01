@@ -1,0 +1,4 @@
+rootProject.name = 'Flok'
+
+include 'flok-api'
+include 'flok-plugin'

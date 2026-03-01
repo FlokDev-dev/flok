@@ -1,0 +1,18 @@
+# Flok Configuration
+
+# Enable verbose debug logging
+debug: false
+
+# Scripts folder (relative to plugin data folder)
+scripts:
+  folder: scripts
+
+# Persistent storage
+storage:
+  data-file: flok_data.yml
+
+# Safety limits
+safety:
+  # Max AST operations per script execution before halting
+  # Prevents infinite loops from freezing the server
+  max-ops: 50000

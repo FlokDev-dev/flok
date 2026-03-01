@@ -1,0 +1,19 @@
+name: Flok
+version: '1.0.0'
+main: wbog.flok.FlokPlugin
+api-version: '1.21'
+description: Lightweight server scripting a performance-first Skript alternative.
+authors: [ wbog ]
+website: ''
+
+commands:
+  flok:
+    description: Flok admin command
+    usage: /flok <reload|debug|info|list|storage>
+    permission: flok.admin
+    aliases: [ fk ]
+
+permissions:
+  flok.admin:
+    description: Access to /flok admin commands
+    default: op

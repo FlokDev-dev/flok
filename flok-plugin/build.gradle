@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+group = 'wbog.flok'
+version = '1.0'
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT'
+    implementation project(':flok-api')
+}
+
+// Fat jar — bundles flok-api classes into the plugin jar
+jar {
+    dependsOn ':flok-api:jar'
+
+    archiveBaseName = 'Flok'
+    archiveClassifier = ''
+
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Implementation-Title': 'Flok',
+                'Implementation-Version': rootProject.version
+    }
+}
+
+processResources {
+    filesMatching('plugin.yml') {
+        expand version: rootProject.version
+    }
+}
