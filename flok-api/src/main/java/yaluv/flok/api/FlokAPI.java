@@ -1,4 +1,4 @@
-package wbog.flok.api;
+package yaluv.flok.api;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -27,7 +27,7 @@ public interface FlokAPI {
     static FlokAPI get() {
         RegisteredServiceProvider<FlokAPI> rsp =
             Bukkit.getServicesManager().getRegistration(FlokAPI.class);
-        if (rsp == null) throw new IllegalStateException("Flok is not loaded or did not register its API.");
+        if (rsp == null) throw new IllegalStateException("flok is not loaded or did not register its API.");
         return rsp.getProvider();
     }
 }

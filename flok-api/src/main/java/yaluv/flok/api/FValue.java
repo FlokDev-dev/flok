@@ -1,4 +1,4 @@
-package wbog.flok.api;
+package yaluv.flok.api;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

@@ -1,4 +1,4 @@
-package wbog.flok.api;
+package yaluv.flok.api;
 
 import org.bukkit.entity.Player;
 
