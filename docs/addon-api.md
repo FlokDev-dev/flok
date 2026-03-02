@@ -5,7 +5,7 @@ Other plugins can extend Flok by depending on `flok-api.jar`. This lets you regi
 ## Getting the API
 
 ```java
-import wbog.flok.api.FlokAPI;
+import api.yaluv.flok.FlokAPI;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
 RegisteredServiceProvider<FlokAPI> rsp =

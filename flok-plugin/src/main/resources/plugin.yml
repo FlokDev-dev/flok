@@ -1,15 +1,15 @@
 name: Flok
 version: '1.0.0'
-main: wbog.flok.FlokPlugin
+main: yaluv.flok.FlokPlugin
 api-version: '1.21'
-description: Lightweight server scripting a performance-first Skript alternative.
+description: Lightweight server scripting engine..
 authors: [ wbog ]
-website: ''
+website: 'https://flokdev-dev.github.io/flok/#/'
 
 commands:
   flok:
     description: Flok admin command
-    usage: /flok <reload|debug|info|list|storage>
+    usage: /flok <reload | debug | info | list | storage>
     permission: flok.admin
     aliases: [ fk ]
 
